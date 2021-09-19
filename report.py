@@ -1,3 +1,4 @@
+from abc import ABCMeta, abstractmethod
 import datetime
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 from jinja2.exceptions import TemplateNotFound
@@ -5,7 +6,7 @@ import pdfkit
 import pandas as pd
 
 
-class Report(object):
+class Report(metaclass=ABCMeta):
     def __init__(self, root_path):
         self.root_path = root_path
         self.initialize_paths()
@@ -40,7 +41,7 @@ class Report(object):
     """
     This function must be overriden in order to function
     """
-
+    @abstractmethod
     def render_report(self):
         env = Environment(loader=FileSystemLoader(self.raw_templates_path), autoescape=select_autoescape())
         """

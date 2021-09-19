@@ -5,7 +5,7 @@ form_name=$2
 
 ROOT_PATH=`pwd`
 APP_PATH="$ROOT_PATH/$1"
-FORMS_PATH="$APP_PATH/forms/uis"
+FORMS_PATH="$APP_PATH/forms/"
 PYTHON_FORMS_PATH="$APP_PATH/src/delegates"
 
 python_form_name=$form_name

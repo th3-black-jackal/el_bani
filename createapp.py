@@ -8,7 +8,7 @@ class App(object):
             os.mkdir(self.ROOT_PATH)
         
         def create_dirs(self):
-            app_dirs = {'forms': ['uis', 'python_forms'], 'static': ['images', 'css'], 'src': '', 'templates': ['rendered_templates', 'raw_templates'], 
+            app_dirs = {'forms': '', 'static': ['images', 'css'], 'src': ['delegates'], 'templates': ['rendered_templates', 'raw_templates'], 
                     'tests':'', 'reports':''}
             
             """
